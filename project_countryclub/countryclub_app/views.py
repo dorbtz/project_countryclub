@@ -20,6 +20,11 @@ class ClubMembersViewSet(viewsets.ModelViewSet):
     serializer_class = ClubMembersSerializer
     queryset = ClubMembers.objects.all()
 
+
+class ClubEventsViewSet(viewsets.ModelViewSet):
+    serializer_class = ClubEventsSerializer
+    queryset = ClubEvents.objects.all()
+
 # generic based view
 # class ClubGenericAPIView(generics.GenericAPIView, mixins.ListModelMixin, mixins.CreateModelMixin,
 #                          mixins.UpdateModelMixin,

@@ -1,3 +1,4 @@
+from django import forms
 from django.db import models
 from django_countries.fields import CountryField
 
@@ -42,15 +43,17 @@ class ClubMembers(ClubModel):
 
 
 class ClubEvents(ClubModel):
-    title = models.CharField(null=False, blank=False)
+    title = models.CharField(null=False, blank=False, max_length=512)
     date = models.DateField(null=True, blank=True)
     time = models.TimeField(null=True, blank=True)
-    trainer = models.ForeignKey(ClubMembers)
+    host = models.ForeignKey(ClubMembers, on_delete=models.RESTRICT)
 
     class Meta:
         db_table = "club_events"
 
     def __str__(self):
-        return f"{self.title} {self.date} {self.time}"
+        return f"{self.title} {self.date} {self.time} {self.host}"
+
+
 
 # TODO: Complete the ClubEvents Model with more values and add Generic ViewSets in views.py

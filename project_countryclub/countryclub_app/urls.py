@@ -7,6 +7,7 @@ from .views import *
 router = DefaultRouter()
 router.register('club', ClubViewSet, basename='club')
 router.register('member', ClubMembersViewSet, basename='member')
+router.register('club_events', ClubEventsViewSet, basename='club_events')
 
 urlpatterns = [
     # ViewSets:
