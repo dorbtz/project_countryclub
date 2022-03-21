@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title_block %} Country Club - Our Clubs {% endblock %}
+
+{% block content_block %}
+
+<div>
+    <div>
+        <h3>
+            Our Club:
+        </h3>
+    </div>
+    <div class="club-info">
+        <p>Architectural design in perfect harmony with its surroundings.
+Inspired by the exotic island of Bali, decorated with natural stone, hand-carved statues, Balinese furnishings and marble floors throughout the public areas.
+
+The spectacular views of the Atlantic Ocean and the Island of La Gomera provide a stunning backdrop to the Hotel´s reception area and its large infinity pool.</p>
+    </div>
+    {% for club in clubs %}
+        <p>City: {{ club.city }}</p>
+        <p>Address: {{ club.address }}</p>
+        <a href="{% url 'club_details' club %}">Go to club details</a>
+    {% endfor %}
+</div>
+<div style="">
+    <video autoplay width="100%" height="5%" controls>
+        <source src="https://videos.hyatt.com/hyatt_regency_coco_beach_resort_mast.mp4">
+    </video>
+</div>
+{% endblock %}

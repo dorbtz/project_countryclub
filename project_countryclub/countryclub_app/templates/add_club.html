@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title_block %} Add New Club {% endblock %}
+
+{% block content_block %}
+
+<form action="{% url 'add_club' %}" method="post">
+
+    {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            {{ form.city.errors }}
+            <label for="{{ form.city.id_for_label }}">Country Club's City: </label>
+            {{ form.city }}
+        </div>
+        <br>
+        <div class="fieldWrapper">
+            {{ form.address.errors }}
+            <label for="{{ form.address.id_for_label }}">Country Club's Address: </label>
+            {{ form.address }}
+        </div><br>
+
+        <input type="submit" value="Add Club">
+
+
+</form><br>
+
+{% endblock %}

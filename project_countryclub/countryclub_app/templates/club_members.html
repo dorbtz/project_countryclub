@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title_block %} Country Club Memberships {% endblock %}
+
+{% block content_block %}
+<form>
+    <div>
+        <p>Members Page</p>
+    </div>
+    <h3>New Member Details:</h3>
+    <div class='form-control'>
+        <label>Passport ID</label>
+        <input type='text'
+                placeholder='Add Passport ID'/>
+    </div>
+    <div class='form-control'>
+        <label>First Name</label>
+        <input type='text'
+                placeholder='First Name'/>
+    </div>
+    <div class='form-control'>
+        <label>Last Name</label>
+        <input type='text'
+                placeholder='Last Name'/>
+    </div>
+    <div class='form-control'>
+        <label>Birth Date</label>
+        <input type='date'/>
+    </div>
+    <div class='form-control'>
+        <label>City</label>
+        <input type='text'
+                placeholder='Add City Name'/>
+    </div>
+    <div class='form-control'>
+        <label>Address</label>
+        <input type='text'
+                placeholder='Add Address'/>
+    </div>
+
+    <input type="submit" value="Add Member">
+
+</form>
+
+<img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/19868507.jpg?k=e05b86ad674dba8e0b6d52f608472d793df4f222b7bb7660846cbf69ab7fd43f&o=&hp=1">
+{% endblock %}

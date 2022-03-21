@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content_block %}
+
+<div>
+    <p>
+        Main Country Club Page
+    </p>
+    <a href="{% url 'clubs' %}">Our Clubs</a>
+    <br>
+    <a href="{% url 'club_details' %}">Club Details</a>
+    <br>
+    <a href="{% url 'club_staff' %}">Our Team</a>
+    <br>
+    <a href="{% url 'club_members' %}">Members</a>
+    <br>
+    <button href="btn-primary" onclick="location.href = '{% url 'add_club' %}' ">Add a new Club</button>
+</div>
+
+<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/256944310.jpg?k=796595d408f8ebce3b352b257de17c59b2ef88e3bdc6784b2ccb41f2c67fdb45&o=&hp=1">
+
+{% endblock %}
